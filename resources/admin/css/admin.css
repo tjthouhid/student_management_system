@@ -298,3 +298,8 @@ footer .navbar-default p.navbar-text {
     width: 100%;color:#fff;
 }
 
+/*Logic css*/
+.login-container{
+    max-width: 600px;
+    margin: 40px auto;
+}

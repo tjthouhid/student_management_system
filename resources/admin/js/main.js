@@ -15,6 +15,7 @@ function showNotifyJs(error_msg,type){
 			 );
 }
 
+
 jQuery(function($){
 	 // Uses this function to search submit
         function tableReload(){
@@ -80,6 +81,4 @@ jQuery(function($){
 function tableReload(){
 	dataTableObj.draw();
 }
-
-	
 });

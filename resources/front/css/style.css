@@ -1,0 +1,9 @@
+body{background-color: #3F6699;}
+.container{background-color: #3F6699;}
+.student-register-form{max-width: 800px;margin: 40px auto;background-color: #78C2C3;padding: 40px 80px;color: #0D1B4C;}
+.student-register-form .form-title{text-align: center;}
+.student-register-form button{background-color: #F3ECC8;border: none; color:#0D1B4C;padding: 10px 40px;}
+.error{color: red;}
+.dashboard-msg{color:#fff;text-align: center;}
+.dashboard-msg a{color:red;}
+.hegiht-div{height: 120px;}

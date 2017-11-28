@@ -16,7 +16,12 @@ $lang["male"] = "Male";
 $lang["address"] = "Address";
 $lang["phone"] = "Phone";
 $lang["email"] = "Email";
-$lang["password"] = "Password";
+$lang["nid"] = "National ID";
+$lang["course"] = "Course";
+$lang["list"] = "List";
+$lang["choose"] = "Choose a";
+$lang["not_null"] = "Can not be Null.";
+
 $lang["photo"] = "Photo";
 $lang["bloodgroup"] = "Blood Group";
 $lang["fathername"] = "Father Name";
@@ -34,6 +39,10 @@ $lang["updated"] = "Updated";
 $lang["insert"] = "Insert";
 $lang["inserted"] = "Inserted";
 $lang["not_available"] = "This Page is not available.";
+$lang["required"] = "Required";
+$lang["please_enter"] = "Please Enter";
+$lang["access_denied"] = "You are not Eligible For Access This Page!";
+$lang["some_thing_wrong"] = "Some Thing Went Wrong. Try Again Later!";
 
 // Classes
 
@@ -43,6 +52,31 @@ $lang["class_title_null"] = "Class Title Can not Be Blank";
 
 // Dasoboard
 $lang["dashboard"] = "Dashboard";
+$lang["pay"] = "Payment";
+
+
+// Login
+$lang["login"] = "Login";
+$lang["user_name"] = "User Name";
+$lang["password"] = "Password";
+$lang["success_login"] = "Successfully Loggedin.";
+$lang["wrong_user_detail"] = "Wrong ".$lang["user_name"]." / ".$lang["password"];
+
+
+// profile 
+$lang["profile"]= "Profile";
+
+// Home
+$lang["home"] = "Home";
+
+
+// Course
+$lang["course"] = "Course";
+$lang["price"] = "Price";
+
+
+// Register
+$lang["register"] = "Register";
 
 
 // Students

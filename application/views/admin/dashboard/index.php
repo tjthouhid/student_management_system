@@ -5,22 +5,57 @@
             <div class="content-box-large maincontent">
                 <div class="panel-heading">
                     <h1 class="panel-title"><?php echo $page_name;?></h1><!-- header test -->
+                    <br>
+                    <a href="<?php echo site_url();?>scadmin/course/add" class="btn btn-primary"><?php echo lang('add')." ".lang("course");?></a>
                 </div>
                 <div class="panel-body"> <!-- Start of content Body -->
-                    <h2>Hello Admin Welcome To School Name</h2>
-                        <p> Ut tristique adipiscing mauris, sit amet suscipit metus porta quis. 
-                    Donec dictum tincidunt erat, eu blandit ligula. 
-                    Nam sit amet dolor sapien. Quisque velit erat, congue sed suscipit vel, 
-                    feugiat sit amet enim. Suspendisse interdum enim at mi tempor commodo. 
-                    Sed tincidunt sed tortor eu scelerisque. Donec luctus malesuada vulputate.
-                     Nunc vel auctor metus, vel adipiscing odio. Aliquam aliquet rhoncus libero, 
-                      Maecenas in elementum libero. Sed consequat pellentesque ultricies.
-                       Ut laoreet vehicula nisl sed placerat. Duis posuere lectus n, 
-                       eros et hendrerit pellentesque, ante magna condimentum sapien,
-                    eget ultrices eros libero non orci. Etiam varius diam lectus. </p>
+                    
+                    <table id="student_table" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th><?php echo lang('sl_no');?></th>
+                          <th><?php echo lang('student');?> <?php echo lang('name');?></th>
+                          <th><?php echo lang('student');?> <?php echo lang('address');?></th>
+                          <th><?php echo lang('student');?> <?php echo lang('email');?></th>
+                          
+                          <th><?php echo lang('student');?> <?php echo lang('phone');?></th>
+                          <th><?php echo lang('student');?> <?php echo lang('nid');?></th>
+                          <th><?php echo lang('student');?> <?php echo lang('course');?></th>
+                          <th><?php echo lang('price');?></th>
+                          <th><?php echo lang('pay');?></th>
+                        </tr>
+                      </thead>
+
+
+                      <tbody>
+
+                      </tbody>
+                    </table>
                 </div> <!-- End of content Body -->
             </div>
         </div>
     </div>
 </div><!-- End of main container -->
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="delete-column">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><?php echo lang('delete')." ".lang('student');?></h4>
+      </div>
+      <div class="modal-body">
+        <?php echo lang('delete_confirm');?>
+        <input type="hidden" value="" class="delete-action">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang('cancel')?></button>
+        <button type="button" class="btn btn-primary do-delete-btn"><?php echo lang('yes')?></button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript" src="<?php echo site_url().$options['admin_resource'];?>js/pages/dashboard.js"></script>
 
