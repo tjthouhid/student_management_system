@@ -66,6 +66,7 @@ padding: 20px 0px 0px;
 	
 	
 </div>
+<?php if($student_datas): ?>
 <div class="c">
 	<h2>Addmission Details</h2>
 	<table cellpadding="20px" width="100%">
@@ -79,7 +80,7 @@ padding: 20px 0px 0px;
 				<p>National ID: <?php echo $student_datas[0]->student_nid;?></p>
 			</td>
 			<td class="l2">
-				<img src="uploads/<?php echo $student_datas[0]->student_photo;?>" width="">
+				<img src="uploads/students/<?php echo $student_datas[0]->student_photo;?>" width="">
 			</td>
 		</tr>
 	</table>
@@ -87,6 +88,8 @@ padding: 20px 0px 0px;
 
 	
 </div>
+<?php endif; ?>
+<?php if($student_datas): ?>
 <div class="s">
 	<h2>Selected Course</h2>
 	<table width="100%" cellspacing="0px">
@@ -109,6 +112,8 @@ padding: 20px 0px 0px;
 	</table>
 	
 </div>
+<?php endif; ?>
+<?php if($payment_datas): ?>
 <div class="cr">
 	<h2>Payment Details</h2>
 	<table width="100%" cellspacing="0px">
@@ -134,6 +139,8 @@ padding: 20px 0px 0px;
 	</table>
 	
 </div>
+<?php endif; ?>
+
 
 <div class="sig">
 	---------------------------<br>

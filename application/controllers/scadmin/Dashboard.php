@@ -77,7 +77,7 @@ class Dashboard extends CI_Controller {
 		    
 		 
 		    
-		    $row['8'] ='<a href="'.site_url().'scadmin/dashboard/pay/'.$sdata->student_id.'" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i></a>';
+		    $row['8'] ='<a href="'.site_url().'scadmin/dashboard/pay/'.$sdata->student_id.'" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i></a><a href="'.site_url('students/printPdf2/').$sdata->student_id.'" class="btn btn-info"><i class="fa fa-print" aria-hidden="true"></i><a/>';
 		   
 		
 		    $data[] = $row;
