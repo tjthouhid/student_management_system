@@ -8,7 +8,6 @@
 
 body {
  background-color: #fff;
- margin: 40px;
  font-family: Lucida Grande, Verdana, Sans-serif;
  font-size: 14px;
  color: #4F5155;
@@ -18,10 +17,10 @@ body {
 border-bottom: 1px solid #D0D0D0;
 width: 800px;
 margin: 0px auto;
-padding: 20px 0px 0px;
+padding: 0px 0px 0px;
 }
 
-.h .l1 img{width: 80px;}
+.h .l1 img{margin-left:20px;width: 80px;}
 
 
 .h .l2 h2{padding: 5px;margin: 0px;}
@@ -53,9 +52,9 @@ padding: 20px 0px 0px;
 <body>
 
 <div class="h">
-	<table cellpadding="5">
+	<table cellpadding="">
 		<tr>
-			<td class="l1"><img src="uploads/logo.png" width=""></td>
+			<td class="l1"><img src="uploads/logo.png" width="80"></td>
 			<td class="l2">
 				<h2>School Name</h2>
 				<p>Address: xxxxxxxxxxxxxxx</p>
@@ -80,7 +79,7 @@ padding: 20px 0px 0px;
 				<p>National ID: <?php echo $student_datas[0]->student_nid;?></p>
 			</td>
 			<td class="l2">
-				<img src="uploads/students/<?php echo $student_datas[0]->student_photo;?>" width="">
+				<img src="uploads/students/<?php echo $student_datas[0]->student_photo;?>" width="200">
 			</td>
 		</tr>
 	</table>

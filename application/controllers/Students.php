@@ -187,40 +187,26 @@ class Students extends CI_Controller {
 		$user_id= $this->session->userdata('user_id');
 		$data['student_datas']=$this->mod_students->get_student_datas($user_id);
 		$data['payment_datas']=$this->mod_students->get_student_payment_datas($user_id);
-		$avatarUrl = site_url().'uploads/logo.png';
+		$this->load->library('tjmpdf_html2pdf');
+		$str=$this->load->view($this->root_folder."/student/printPdf", $data, true);
+		//$str="";
+		//Set folder to save PDF to
+		$this->tjmpdf_html2pdf->folder('./uploads/');
 		
-
-		//echo '<img src="'.$data['imageData'].'" width="">';
-		//exit;
-		    // // page info here, db calls, etc.     
-		   //$this->load->view($this->root_folder."/student/printPdf", $data);
-		    
-
-		   
-		     //Load the library
-		     $this->load->library('html2pdf');
-		     
-		     //Set folder to save PDF to
-		     $this->html2pdf->folder('./uploads/');
-		     
-		     //Set the filename to save/download as
-		     $this->html2pdf->filename('test.pdf');
-		     
-		     //Set the paper defaults
-		     $this->html2pdf->paper('a4', 'portrait');
-		     
-		     // $data = array(
-		     // 	'title' => 'PDF Created',
-		     // 	'message' => 'Hello World!'
-		     // );
-		     
-		     //Load html view
-		     $this->html2pdf->html($this->load->view($this->root_folder."/student/printPdf", $data, true));
-		     
-		     if($this->html2pdf->create('download')) {
-		     	//PDF was successfully saved or downloaded
-		     	echo 'PDF saved';
-		     }
+		//Set the filename to save/download as
+		$this->tjmpdf_html2pdf->filename('test.pdf');
+		
+		//Set the paper defaults
+		$this->tjmpdf_html2pdf->paper('a4', 'portrait');
+		$this->tjmpdf_html2pdf->html($str);
+		if($this->tjmpdf_html2pdf->create('download')) {
+			//PDF was successfully saved or downloaded
+			echo 'PDF saved';
+		}else{
+			show_error("sorry Somthing went wrong");
+		}
+		exit;
+		
 	}
 	function printPdf2($id){
 		$data['page_name']=lang("profile");
@@ -230,40 +216,25 @@ class Students extends CI_Controller {
 		$user_id= $id;
 		$data['student_datas']=$this->mod_students->get_student_datas($user_id);
 		$data['payment_datas']=$this->mod_students->get_student_payment_datas($user_id);
-		$avatarUrl = site_url().'uploads/logo.png';
+		$this->load->library('tjmpdf_html2pdf');
+		$str=$this->load->view($this->root_folder."/student/printPdf", $data, true);
+		//$str="";
+		//Set folder to save PDF to
+		$this->tjmpdf_html2pdf->folder('./uploads/');
 		
-
-		//echo '<img src="'.$data['imageData'].'" width="">';
-		//exit;
-		    // // page info here, db calls, etc.     
-		   //$this->load->view($this->root_folder."/student/printPdf", $data);
-		    
-
-		   
-		     //Load the library
-		     $this->load->library('html2pdf');
-		     
-		     //Set folder to save PDF to
-		     $this->html2pdf->folder('./uploads/');
-		     
-		     //Set the filename to save/download as
-		     $this->html2pdf->filename('test.pdf');
-		     
-		     //Set the paper defaults
-		     $this->html2pdf->paper('a4', 'portrait');
-		     
-		     // $data = array(
-		     // 	'title' => 'PDF Created',
-		     // 	'message' => 'Hello World!'
-		     // );
-		     
-		     //Load html view
-		     $this->html2pdf->html($this->load->view($this->root_folder."/student/printPdf", $data, true));
-		     
-		     if($this->html2pdf->create('download')) {
-		     	//PDF was successfully saved or downloaded
-		     	echo 'PDF saved';
-		     }
+		//Set the filename to save/download as
+		$this->tjmpdf_html2pdf->filename('test.pdf');
+		
+		//Set the paper defaults
+		$this->tjmpdf_html2pdf->paper('a4', 'portrait');
+		$this->tjmpdf_html2pdf->html($str);
+		if($this->tjmpdf_html2pdf->create('download')) {
+			//PDF was successfully saved or downloaded
+			echo 'PDF saved';
+		}else{
+			show_error("sorry Somthing went wrong");
+		}
+		exit;
 	}
 
 
